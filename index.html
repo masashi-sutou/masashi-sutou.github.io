@@ -2,116 +2,125 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>株式会社Keepingblog.net</title>
-<link rel="stylesheet" href="practice_styles.css">
+<title>Macchan's Cafe Gallery</title>
+<meta name="description" content="Macchan's Cafe Galleryは、まっちゃんの手料理をまとめて見れるサイトです。">
+<link rel="stylesheet" href="./common/css/normalize.css">
+<link rel="stylesheet" href="./common/css/style.css">
+<script src="common/js/jquery-1.10.1.min.js"></script>
+<script src="common/js/jquery.bxslider/jquery.bxslider.js"></script>
+<link rel="stylesheet" href="common/js/jquery.bxslider/jquery.bxslider.css">
+<!--スライドショーの設定-->
+<script>
+	$(document).ready(function(){
+	$('.bxslider').bxSlider({
+		auto: true,
+		speed: 1300,
+		pause: 5000
+	});
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53925737-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 
 <div id="page">
-<header>
-	<!--ロゴ画像-->
-	<img id="logo" src="background.jpg" alt="" width ="220" height="44">
-	<nav>
-		 <ul>
-		  <li id="current"><a href="#">ホーム</a></li>
-		  <li><a href="#">ニュース</a></li>
-		  <li><a href="#">製品情報</a></li>
-		  <li><a href="#">サービス</a></li>
-		  <li><a href="#">会社概要</a></li>
-		  <li><a href="#">お問い合わせ</a></li>
-		 </ul>
-	</nav>
-	<!--メイン画像-->
-	<img src="UCBerkeley.jpg" alt="" width ="900" height="350">
-</header>
+	<header id="pageHead">
+		<h1 id="siteTitle">Macchan's Cafe Gallery</h1>
+		<p id="catchcopy">まっちゃんの手料理をまとめて見れるサイト</p>
+		<nav class="globalNavi">
+			<ul>
+				<li class="current"><a href="index.html">home</a></li>
+				<li><a href="./profile/profile.html">profile</a></li>
+				<li><a href="./menu/menu.html">menu</a></li>
+				<li><a href="./contact/contact.html">contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-<div id="main">
-	<section>
-		<!--メインコンテンツ-->
-		<h1>ホームページ作成の基礎練習</h1>
-		<p>わかりやすいホームページって何だろう？このホームページは
-		<a herf="#">参考書</a>を利用して、ホームページ作成の基礎を学びます。
-		また作成したHTMLをPHP形式に変更して、WordPressにテーマとして反映させます。</p>
-		<p>これは練習で作成したホームページです。</p>
-	</section>
-</div>
+	<div id="pageBody">
+		<section class="mainVisual">
+			<ul class="bxslider">
+				<li>
+					<div class="mainVisualText">
+						<h1>Cafe Gallery Debut</h1>
+						<p>Macchan's Cafe Galleryがオープン<br>
+						まっちゃんの手料理写真やレシピ情報が満載！！</p>
+					</div>
+					<img src="images/main_cooked_up_a_happiness_easilypancake.jpg" alt="" width="980" height="500">
+				</li>
+				<li>
+					<div class="mainVisualText">
+						<h2>Dishes</h2>
+						<p>パスタ/キッシュ/パエリア/カレー...</p>
+					</div>
+					<img src="images/main_spaghettini_with_salmonspinach&tomato.jpg" alt="" width="980" height="500">
+				</li>
+				<li>
+					<div class="mainVisualText">
+						<h2>Dessert</h2>
+						<p>タルト/クッキー/ケーキ/アイス...</p>
+					</div>
+					<img src="images/main_baked_NY_cheese_cake.jpg" alt="" width="980" height="500">
+				</li>
+				<li>
+					<div class="mainVisualText">
+						<h2>Drink</h2>
+						<p>コーヒー/マキアート/モカ...</p>
+					</div>
+					<img src="images/main_mocha&caramel_macchiato.jpg" alt="" width="980" height="500">
+				</li>
+			</ul>
+		</section>
 
-<div id="sub">
-	<aside>
-		<section>
-			<!--サブコンテンツ-->
-			<h2>最高のホームページを作ろう！</h2>
-			<p><img src="yen.png" alt="" width ="45" height="45">
-			これはサイドバーのテキストエリアです。
-			これはサイドバーのテキストエリアです。
-			これはサイドバーのテキストエリアです。
-			</p>
-		</section>
-		<section>
-			<h2>CM「メイキング動画」公開中</h2>
-			<p><img src="play.png" alt="" width ="45" height="45">
-			これはサイドバーのテキストエリアです。
-			これはサイドバーのテキストエリアです。
-			これはサイドバーのテキストエリアです。
-			</p>
-		</section>
-	</aside>
-</div>
+		<section class="menuIndex">
+			<article>
+				<a href="#"><img src="menu/images/thumbnail_cold_spaghetti_with_tomatobaby_leaf&smoked_salmon.jpg" alt="" width="300" height="163"></a>
+				<a href="#"><h2>Dishes</h2></a>
+				<p>パスタ/キッシュ/パエリア/カレー...</p>
+			</article>
 
-<footer>
-	<aside>
-		<section>
-			<!--フッターエリア-->
-			<h2>一瞬でわかるHP作成の基礎</h2>
-			<p>
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			</p>
-		</section>
-		<section>
-			<h2>見えない部分へのこだわり</h2>
-			<p>
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			</p>
-		</section>
-		<section>
-			<h2>社会活動・環境活動</h2>
-			<p>
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			ここはフッターのテキストエリアです。
-			</p>
-		</section>
-	</aside>
+			<article>
+				<a href="#"><img src="menu/images/thumbnail_fruits_tarte_ver4.jpg" alt="" width="300" height="163"></a>
+				<a href="#"><h2>Dessert</h2></a>
+				<p>タルト/クッキー/ケーキ/アイス...</p>
+			</article>
 
-<!--コピーライト-->
-<p id="copyright">
-<small>Copyright &copy: 2014 practice homepage site. All rights reserved.</small
->
-</p>
-</footer>
+			<article>
+				<a href="#"><img src="menu/images/thumbnail_iced_mint_mocha.jpg" alt="" width="300" height="163"></a>
+				<a href="#"><h2>Drink</h2></a>
+				<p>コーヒー/マキアート/モカ...</p>
+			</article>
+		</section>
 
-</div>
+		<section class="news">
+			<h1>おしらせ</h1>
+			<table>
+				<tr>
+					<th><time datetime="2014-08-16">2014年8月16日</time></th>
+					<td>Macchan's cafe Galleryをオープンしました。</td>
+				</tr>
+			</table>
+		</section>
+
+	</div><!--終了#pageBody-->
+
+	<p class="pagetop"><a href="#page">ページの先頭へ戻る</a></p>
+
+	<footer id="pageFoot">
+		<p id="copyright"><small>Copyright&copy; 2014 @macchan's cafe All Right Reserved.</small></p>
+	</footer>
+
+</div><!--終了#page-->
 
 </body>
 </html>
+
